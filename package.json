@@ -2,9 +2,9 @@
   "name": "symptom-tracker",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "nodemon server/server.js",
     "start": "node server/server.js"
   },
   "repository": {
@@ -20,5 +20,8 @@
   "homepage": "https://github.com/kerraspring/symptom-tracker#readme",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
