@@ -14,7 +14,8 @@ const app = express();
 
 // use public folder
 
-// GETs
+// get '/' => main routes => main controller with login/logout
+// get '/dashboard => dashboard routes => dashboard controller
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
