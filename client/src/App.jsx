@@ -9,11 +9,13 @@ import SymptomHistory from './components/SymptomHistory';
 const App = () => {
   return (
     <Router>
+       <Switch>
       <Route path="/" exact component={About} />
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
       <Route path="/symptom-history" component={SymptomHistory} />
+      </Switch>
     </Router>
   );
 };
