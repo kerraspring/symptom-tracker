@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { UserContext } from "../Context";
 import axios from "axios";
+import { Button, Link } from "@mui/material";
 
 const Homepage = () => {
 	const userObject = useContext(UserContext);
@@ -23,11 +24,13 @@ const Homepage = () => {
 			) : (
 				<h1>Welcome to symptom tracker</h1>
 			)}
-			<Link to='/login'>
-				<button>Login</button>
+			<Link href='/login' underline="none">
+				<Button variant="contained">Log In</Button>
 			</Link>
-			<button>Signup</button>
-			{userObject && <button onClick={logout}>Logout</button>}
+			<Link href='/signup' underline="none">
+				<Button variant="contained">Sign Up</Button>
+			</Link>
+			{userObject && <Button variant="contained" onClick={logout}>Logout</Button>}
 		</div>
 	);
 };

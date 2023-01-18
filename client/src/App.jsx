@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./Components/Homepage";
-import Loginpage from "./Components/Loginpage";
+import Login from "./Components/Login";
+import Signup from "./Components/Signup";
 import Context, { UserContext } from "./Context";
 
 function App() {
@@ -14,7 +15,11 @@ function App() {
 				/>
 				<Route
 					path='/login'
-					element={<Loginpage />}
+					element={<Login />}
+				/>
+				<Route
+					path='/signup'
+					element={<Signup />}
 				/>
 			</Routes>
 	);
