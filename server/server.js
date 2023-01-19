@@ -8,6 +8,7 @@ const session = require("express-session");
 const flash = require("express-flash");
 const cors = require("cors");
 const connectDB = require("./config/database");
+const mainRoutes = require("./routes/main");
 const authRoutes = require("./routes/auth")
 
 require("dotenv").config({ path: "./server/config/.env" });
@@ -48,6 +49,8 @@ app.use(passport.session());
 //Use flash messages for errors, info, ect...
 app.use(flash());
 
+// Setup Routes
+app.use("/", mainRoutes);
 app.use('/auth', authRoutes)
 
 const PORT = process.env.PORT || 3000;
