@@ -4,10 +4,10 @@ import { UserContext } from "../Context";
 import axios from "axios";
 import { Button, Link } from "@mui/material";
 
-const Homepage = () => {
+const Homepage = ({data}) => {
 	const userObject = useContext(UserContext);
 
-	const logout = () => {
+	const logout = ({data}) => {
 		axios
 			.get("http://localhost:4000/auth/logout", { withCredentials: true })
 			.then((res) => {
@@ -31,6 +31,7 @@ const Homepage = () => {
 				<Button variant="contained">Sign Up</Button>
 			</Link>
 			{userObject && <Button variant="contained" onClick={logout}>Logout</Button>}
+			<p>{data}</p>
 		</div>
 	);
 };
