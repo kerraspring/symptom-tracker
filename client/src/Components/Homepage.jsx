@@ -7,7 +7,7 @@ import { Button, Link } from "@mui/material";
 const Homepage = ({data}) => {
 	const userObject = useContext(UserContext);
 
-	const logout = ({data}) => {
+	const logout = () => {
 		axios
 			.get("http://localhost:4000/auth/logout", { withCredentials: true })
 			.then((res) => {
