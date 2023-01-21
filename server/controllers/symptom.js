@@ -1,0 +1,1 @@
+const Symptom = require('../models/Symptom');
