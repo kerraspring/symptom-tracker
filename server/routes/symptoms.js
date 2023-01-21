@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const symptomsController = require("../controllers/symptom");
+const symptomsController = require("../controllers/symptoms");
 
 // Post Routes
 
