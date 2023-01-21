@@ -10,6 +10,8 @@ const cors = require("cors");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const authRoutes = require("./routes/auth")
+const PORT = process.env.PORT || 4000;
+
 
 require("dotenv").config({ path: "./server/config/.env" });
 
@@ -52,8 +54,9 @@ app.use(flash());
 // Setup Routes
 app.use("/", mainRoutes);
 app.use('/auth', authRoutes)
-
-const PORT = process.env.PORT || 3000;
+app.get('/express_backend', (req, res) => { 
+	res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
+});
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
