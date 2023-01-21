@@ -4,6 +4,7 @@ const symptomsController = require("../controllers/symptoms");
 
 // Post Routes
 
+// ensure authentication for user to grab their symptoms
 router.get("/:id", symptomsController.getSymptom);
 
 // addSymptom, deleteSymptom
