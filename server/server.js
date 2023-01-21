@@ -10,6 +10,7 @@ const cors = require("cors");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const authRoutes = require("./routes/auth")
+const symptomsRoutes = require("./routes/symptoms")
 const PORT = process.env.PORT || 4000;
 
 
@@ -54,6 +55,7 @@ app.use(flash());
 // Setup Routes
 app.use("/", mainRoutes);
 app.use('/auth', authRoutes)
+app.use('/symptom', symptomsRoutes)
 app.get('/express_backend', (req, res) => { 
 	res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
 });

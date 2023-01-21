@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const postsController = require("../controllers/symptom");
+const symptomsController = require("../controllers/symptom");
 
 // Post Routes
 
-router.get("/:id", postsController.getSymptom);
+router.get("/:id", symptomsController.getSymptom);
 
 // addSymptom, deleteSymptom
 
