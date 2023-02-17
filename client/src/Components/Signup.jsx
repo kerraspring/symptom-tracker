@@ -1,7 +1,13 @@
-import { Button, TextField } from "@mui/material";
+import { Button, TextField, Typography } from "@mui/material";
 import React from "react";
+import GoogleIcon from "@mui/icons-material/Google";
+
 
 const Signup = () => {
+	const googleLogin = () => {
+		window.open("http://localhost:4000/auth/google", "_self");
+	};
+
 	return (
 		<div>
 			<form action='#'>
@@ -21,6 +27,15 @@ const Signup = () => {
 					size='small'
 				/>
 				<Button variant="contained">Submit</Button>
+				<Typography>Or Sign Up with</Typography>
+			<Button
+				variant='contained'
+				color='error'
+				startIcon={<GoogleIcon />}
+				onClick={googleLogin}
+			>
+				Sign Up with Google
+			</Button>
 			</form>
 		</div>
 	);
