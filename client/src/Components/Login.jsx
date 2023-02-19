@@ -9,20 +9,6 @@ const Login = () => {
 
 	return (
 		<div>
-			<form action='#'>
-				<TextField
-					variant='outlined'
-					label='Email'
-					size='small'
-				/>
-				<TextField
-					variant='outlined'
-					label='Password'
-					size='small'
-				/>
-				<Button variant="contained">Login</Button>
-			</form>
-			<Typography>Or Login with</Typography>
 			<Button
 				variant='contained'
 				color='error'
